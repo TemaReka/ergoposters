@@ -1,0 +1,381 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl {
+  margin: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут fill со значением 'none' или начинается с 'url')
+ */
+:where([fill]:not([fill=none],
+[fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут stroke со значением 'none')
+ */
+:where([stroke]:not([stroke=none],
+[stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "PT Root";
+  src: url("../fonts/PTRootUI-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Root";
+  src: url("../fonts/PTRootUI-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter24pt-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-family-base: "Inter", sans-serif;
+  --font-family-accent: "PTRootUI", sans-serif;
+  --container-width: 100rem;
+  --container-padding-x: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
+  --body-padding-y: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
+  --transition-duration: 0.5s;
+  --link-color: 69.6% 0.1721 244.25;
+  --hover-link-color: 64.63% 0.241 32.62;
+  --selection-color: 61.07% 0.163876259829489 247.86828374804395;
+  --sm-gap: clamp(0.75rem, 0.7137096774rem + 0.1612903226vw, 0.875rem);
+  --md-gap: clamp(1.625rem, 1.3709677419rem + 1.1290322581vw, 2.5rem);
+  --lg-gap: clamp(2.625rem, 2.0806451613rem + 2.4193548387vw, 4.5rem);
+  --section-gap: clamp(3.375rem, 2.7217741935rem + 2.9032258065vw, 5.625rem);
+}
+
+.container {
+  max-width: calc(var(--container-width));
+  padding: 0 var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.differenceContainer {
+  display: flex;
+  gap: var(--sm-gap);
+  margin: var(--md-gap) 0 var(--section-gap) 0;
+}
+@media (width <= 50.06125rem) {
+  .differenceContainer {
+    flex-direction: column;
+    margin: var(--md-gap) 0 var(--lg-gap) 0;
+  }
+  .differenceContainer > span {
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+}
+
+.textP {
+  width: 70%;
+}
+@media (width <= 50.06125rem) {
+  .textP {
+    width: 100%;
+  }
+}
+
+p:not(:last-child), a {
+  margin-bottom: var(--sm-gap);
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: "PT Root", sans-serif;
+  font-weight: 700;
+  line-height: 6rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "PT Root", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p, button {
+  font-size: 1.5rem;
+  font-family: "PT Root", sans-serif;
+  font-weight: 400;
+  max-width: 70%;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+footer {
+  padding-bottom: 1.5rem !important;
+}
+footer p {
+  font-family: "PT Root", sans-serif;
+  font-size: 1.2rem;
+  min-width: 100%;
+}
+
+button {
+  border: none;
+  color: #fff;
+  background-color: #0072ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.posters-btn {
+  display: flex;
+}
+
+.posters-img {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+.posters-img > div {
+  flex: 1;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+.gallery > div:nth-child(1) {
+  grid-column: 1/span 1;
+  grid-row: 1/span 4;
+  overflow: hidden;
+}
+.gallery > div:nth-child(1) img {
+  transform: scale(1.1);
+}
+.gallery > div:nth-child(2) {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+}
+.gallery > div:nth-child(3) {
+  grid-column: 2/span 1;
+  grid-row: 3/span 2;
+}
+.gallery-school > div:nth-child(2) {
+  grid-column: 2/span 1;
+  grid-row: 1/span 4;
+}
+.gallery-home > div:nth-child(2) {
+  grid-column: 2/span 1;
+  grid-row: 1/span 3;
+}
+.gallery-home > div:nth-child(3) {
+  grid-column: 2/span 1;
+  grid-row: 4/span 1;
+}
+
+.leading {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.leading_description {
+  display: flex;
+  gap: 2rem;
+}
+.leading_description > p {
+  flex: 1;
+  text-wrap: balance;
+}
+.leading > h1 {
+  margin-bottom: 3rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

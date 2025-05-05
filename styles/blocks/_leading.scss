@@ -1,0 +1,19 @@
+.leading {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    &_description {
+        display: flex;
+        gap: 2rem;
+
+        & > p {
+            flex: 1;
+            text-wrap: balance;
+        }
+    }
+
+    & > h1 {
+        margin-bottom: 3rem;
+    }
+   
+}

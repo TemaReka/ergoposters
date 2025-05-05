@@ -1,0 +1,42 @@
+@use 'helpers' as *;
+
+.container {
+    max-width: calc(var(--container-width));
+    padding: 0 var(--container-padding-x);
+    margin-inline: auto;
+}
+
+.differenceContainer {
+    display: flex;
+    gap: var(--sm-gap);
+    margin: var(--md-gap) 0 var(--section-gap) 0;
+
+    @include middleSm {
+        flex-direction: column;
+        margin: var(--md-gap) 0 var(--lg-gap) 0;
+
+        & > span {
+            justify-content: center;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+
+.textP {
+    width: 70%;
+
+    @include middleSm {
+        & {
+            width: 100%;
+        }
+    }
+}
+
+p:not(:last-child), a {
+    margin-bottom: var(--sm-gap);
+}   
+
+// .fullWidth {
+//     width: 100%;
+// }

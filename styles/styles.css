@@ -312,17 +312,19 @@ button {
   border-radius: 0.25rem;
 }
 
-.posters-btn {
+.posters-item {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
 }
-
-.posters-img {
+.posters-item-container {
   display: flex;
   gap: 1rem;
   flex-direction: row;
   margin-bottom: 1rem;
 }
-.posters-img > div {
+.posters-item > div {
   flex: 1;
 }
 

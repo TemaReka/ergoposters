@@ -43,16 +43,19 @@ button {
     border-radius: rem(4);
 }
 
-.posters-btn {
-    display: flex;
-}
 
-.posters-img { 
+.posters-item {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
-    flex-direction: row;
-    margin-bottom: 1rem;
+    align-items: flex-start;
     
+    &-container {
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
 
     & > div {
         flex: 1;

@@ -291,7 +291,7 @@ h2 {
 }
 
 p {
-  font-size: clamp(1.125rem, 1.0161290323rem + 0.4838709677vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.1774193548rem + 0.3225806452vw, 1.5rem);
   font-family: "PT Root", sans-serif;
   font-weight: 400;
   max-width: 70%;
@@ -321,7 +321,7 @@ button {
   background-color: #0072ff;
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
-  font-size: clamp(1.125rem, 1.0161290323rem + 0.4838709677vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.1774193548rem + 0.3225806452vw, 1.5rem);
   font-family: "PT Root", sans-serif;
   font-weight: 400;
 }
@@ -454,7 +454,7 @@ button {
   text-wrap: balance;
 }
 .leading > h1 {
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 1.7096774194rem + 1.2903225806vw, 3rem);
 }
 
 /*# sourceMappingURL=styles.css.map */

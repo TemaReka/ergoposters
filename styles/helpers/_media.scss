@@ -1,15 +1,8 @@
 @use 'functions' as *;
 
-$laptop: 1296.98;
-$middle: 923.98;
-$middleSm: 800.98;
-$sm: 640.98;
-
-@mixin laptop {
-    @media (width <= rem($laptop)) {
-        @content;
-    }
-}
+$middle: 1024.98;
+$middleSm: 860.98;
+$sm: 720.98;
 
 @mixin middle {
     @media (width <= rem($middle)) {

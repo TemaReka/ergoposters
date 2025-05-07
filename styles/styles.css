@@ -346,7 +346,7 @@ footer p {
 button {
   border: none;
   color: #fff;
-  background-color: #0072ff;
+  background-color: oklch(var(--link-color));
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   font-size: clamp(1.25rem, 1.1774193548rem + 0.3225806452vw, 1.5rem);
@@ -354,7 +354,7 @@ button {
   font-weight: 400;
 }
 button:hover {
-  background-color: var(--hover-link-color);
+  background-color: oklch(var(--hover-link-color));
 }
 
 .posters-item {

@@ -74,7 +74,7 @@ footer {
 button {
     border: none;
     color: #fff;
-    background-color: #0072ff;
+    background-color: oklch(var(--link-color));
     padding: rem(12) rem(24);
     border-radius: rem(4);
     font-size: fluid(24, 20);
@@ -82,7 +82,7 @@ button {
     font-weight: 400;
 
     &:hover {
-        background-color: var(--hover-link-color);
+        background-color: oklch(var(--hover-link-color));
     }
 }
 

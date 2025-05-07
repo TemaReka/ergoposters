@@ -226,8 +226,8 @@ svg * {
   --container-padding-x: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
   --body-padding-y: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
   --transition-duration: 0.5s;
-  --link-color: 69.6% 0.1721 244.25;
-  --hover-link-color: 64.63% 0.241 32.62;
+  --link-color: 0.59 0.226975 258.9616;
+  --hover-link-color: 0.73 0.1811 154.91;
   --selection-color: 61.07% 0.163876259829489 247.86828374804395;
   --sm-gap: clamp(0.75rem, 0.7137096774rem + 0.1612903226vw, 0.875rem);
   --md-gap: clamp(1.625rem, 1.3709677419rem + 1.1290322581vw, 2.5rem);
@@ -307,6 +307,26 @@ section {
   margin-bottom: 3rem;
 }
 
+a {
+  position: relative;
+  color: oklch(var(--link-color));
+  transition: color 0.5s ease;
+  text-decoration: none;
+}
+a u {
+  text-decoration: underline;
+  text-decoration-thickness: 0.0625rem; /* Задаём толщину подчёркивания */
+  text-underline-offset: 0.175em; /* Задаём сдвиг подчёркивания */
+  text-decoration-color: oklch(var(--link-color)/0.2);
+  text-decoration-skip: none; /* Запрещаем подчёркиванию пропускать выносные элементы букв */
+  text-decoration-skip-ink: none;
+}
+a:hover {
+  text-decoration-color: oklch(var(--hover-link-color)/0.2);
+  color: oklch(var(--hover-link-color));
+  transition: color 0s;
+}
+
 footer {
   display: flex;
   column-gap: 2.5rem;
@@ -334,7 +354,7 @@ button {
   font-weight: 400;
 }
 button:hover {
-  background-color: rgb(0, 200, 115);
+  background-color: var(--hover-link-color);
 }
 
 .posters-item {

@@ -30,6 +30,29 @@ section {
     margin-bottom: 3rem;
 }
 
+a {
+    position: relative;
+    color: oklch(var(--link-color));
+    transition: color 0.5s ease;
+    text-decoration: none;
+
+    &  u {
+        text-decoration: underline;
+        text-decoration-thickness: rem(1); /* Задаём толщину подчёркивания */
+        text-underline-offset: 0.175em; /* Задаём сдвиг подчёркивания */
+        text-decoration-color: oklch(var(--link-color) / 0.2);
+        text-decoration-skip: none; /* Запрещаем подчёркиванию пропускать выносные элементы букв */
+        text-decoration-skip-ink: none;
+    }
+
+
+    &:hover {
+        text-decoration-color: oklch(var(--hover-link-color) / 0.2);
+        color: oklch(var(--hover-link-color));
+        transition: color 0s;
+    }
+}
+
 footer {
 
     display: flex;
@@ -59,7 +82,7 @@ button {
     font-weight: 400;
 
     &:hover {
-        background-color: rgb(0, 200, 115);
+        background-color: var(--hover-link-color);
     }
 }
 

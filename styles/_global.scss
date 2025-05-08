@@ -4,7 +4,7 @@ h1 {
     font-size: fluid(96, 42);
     font-family: 'PT Root', sans-serif;
     font-weight: 700;
-    line-height: fluid(96, 42);
+    line-height: fluid(90, 42);
 }
 
 h2 {
@@ -98,7 +98,7 @@ button {
     
     &-container {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
         flex-direction: row;
         margin-bottom: 1rem;
 
@@ -109,8 +109,11 @@ button {
         }
     }
 
+
+
     & > div {
         flex: 1;
+        margin-bottom: fluid(28, 20);
     }
 }
 

@@ -287,7 +287,7 @@ h2 {
   font-family: "PT Root", sans-serif;
   font-weight: 700;
   line-height: clamp(2rem, 1.7096774194rem + 1.2903225806vw, 3rem);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -365,6 +365,9 @@ button:hover {
 .posters-item_img {
   margin-bottom: 1.2rem;
 }
+.posters-item_img img {
+  border: 1px solid #ccc;
+}
 .posters-item-container {
   display: flex;
   gap: 3rem;
@@ -396,39 +399,51 @@ button:hover {
     grid-template-rows: auto;
   }
 }
-.gallery > div:nth-child(1) {
+.gallery-studio > div:nth-child(1) {
   grid-column: 1/span 1;
   grid-row: 1/span 4;
   overflow: hidden;
 }
+.gallery-studio > div:nth-child(1) img {
+  transform: scale(1.2) translateX(-8%);
+}
 @media (width <= 45.06125rem) {
-  .gallery > div:nth-child(1) {
+  .gallery-studio > div:nth-child(1) {
     grid-column: 1/span 2;
     grid-row: 1/span 2;
   }
 }
-.gallery > div:nth-child(1) img {
-  transform: scale(1.1);
-}
-.gallery > div:nth-child(2) {
+.gallery-studio > div:nth-child(2) {
   grid-column: 2/span 1;
   grid-row: 1/span 2;
 }
 @media (width <= 45.06125rem) {
-  .gallery > div:nth-child(2) {
+  .gallery-studio > div:nth-child(2) {
     grid-column: 1/span 1;
     grid-row: 3/span 2;
   }
 }
-.gallery > div:nth-child(3) {
+.gallery-studio > div:nth-child(3) {
   grid-column: 2/span 1;
   grid-row: 3/span 2;
+  overflow: hidden;
+}
+.gallery-studio > div:nth-child(3) img {
+  transform: scale(1.5) translateY(15%) translateX(-2%);
 }
 @media (width <= 45.06125rem) {
-  .gallery > div:nth-child(3) {
+  .gallery-studio > div:nth-child(3) {
     grid-column: 2/span 1;
     grid-row: 3/span 2;
   }
+}
+.gallery-school > div:nth-child(1) {
+  grid-column: 1/span 1;
+  grid-row: 1/span 4;
+  overflow: hidden;
+}
+.gallery-school > div:nth-child(1) img {
+  transform: scale(2.5) translateY(20%) translateX(6%);
 }
 @media (width <= 45.06125rem) {
   .gallery-school > div:nth-child(1) {
@@ -445,6 +460,14 @@ button:hover {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
   }
+}
+.gallery-home > div:nth-child(1) {
+  grid-column: 1/span 1;
+  grid-row: 1/span 4;
+  overflow: hidden;
+}
+.gallery-home > div:nth-child(1) img {
+  transform: scale(1.1);
 }
 @media (width <= 45.06125rem) {
   .gallery-home > div:nth-child(1) {
@@ -465,6 +488,10 @@ button:hover {
 .gallery-home > div:nth-child(3) {
   grid-column: 2/span 1;
   grid-row: 4/span 1;
+  overflow: hidden;
+}
+.gallery-home > div:nth-child(3) img {
+  transform: scale(1.1) translateY(-2%);
 }
 @media (width <= 45.06125rem) {
   .gallery-home > div:nth-child(3) {

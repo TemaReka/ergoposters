@@ -12,7 +12,7 @@ h2 {
     font-family: 'PT Root', sans-serif;
     font-weight: 700;
     line-height: fluid(48, 32);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 p {
@@ -94,6 +94,10 @@ button {
 
     &_img {
         margin-bottom: 1.2rem;
+
+        & img {
+            border: 1px solid #ccc;
+        }
     }
     
     &-container {
@@ -129,18 +133,19 @@ button {
         grid-template-rows: auto;
     }
 
-    &> div:nth-child(1) {
+    &-studio {
+          &> div:nth-child(1) {
         grid-column: 1 / span 1;
         grid-row: 1 / span 4;
         overflow: hidden;
 
+        & img {
+            transform: scale(1.2) translateX(-8%);
+        }
+
         @include sm {
             grid-column: 1 / span 2;
             grid-row: 1 / span 2;
-        }
-
-        & img {
-            transform: scale(1.1);
         }
 
     }
@@ -158,20 +163,36 @@ button {
     &> div:nth-child(3) {
         grid-column: 2 / span 1;
         grid-row: 3 / span 2;
+        overflow: hidden;
+
+        & img {
+            transform: scale(1.5) translateY(15%) translateX(-2%);
+        }
 
         @include sm {
             grid-column: 2 / span 1;
             grid-row: 3 / span 2;
         }
 
+    }  
     }
+
+
 
     &-school {
         &> div:nth-child(1) {
-        @include sm {
             grid-column: 1 / span 1;
-            grid-row: 2 / span 1;
-        }
+            grid-row: 1 / span 4;
+            overflow: hidden;
+
+            & img {
+                transform: scale(2.5) translateY(20%) translateX(6%);
+            }
+
+            @include sm {
+                grid-column: 1 / span 1;
+                grid-row: 2 / span 1;
+            }
 
         }
 
@@ -191,6 +212,14 @@ button {
     &-home {
 
         &> div:nth-child(1) {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 4;
+            overflow: hidden;
+
+            & img {
+                transform: scale(1.1);
+            }
+
             @include sm {
                 grid-column: 1 / span 1;
                 grid-row: 1 / span 1;
@@ -212,6 +241,11 @@ button {
         &> div:nth-child(3) {
             grid-column: 2 / span 1;
             grid-row: 4 / span 1;
+            overflow: hidden;
+
+            & img {
+                transform: scale(1.1) translateY(-2%);
+            }
 
             @include sm {
                 grid-column: 1 / span 1;

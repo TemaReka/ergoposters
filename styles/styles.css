@@ -223,7 +223,7 @@ svg * {
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "PTRootUI", sans-serif;
   --container-width: 100rem;
-  --container-padding-x: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
+  --container-padding-x: clamp(1.875rem, 1.3306451613rem + 2.4193548387vw, 3.75rem);
   --body-padding-y: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
   --transition-duration: 0.5s;
   --link-color: 0.59 0.226975 258.9616;
@@ -241,25 +241,16 @@ svg * {
   margin-inline: auto;
 }
 
-.differenceContainer {
-  display: flex;
-  gap: var(--sm-gap);
-  margin: var(--md-gap) 0 var(--section-gap) 0;
-}
-@media (width <= 53.81125rem) {
-  .differenceContainer {
-    flex-direction: column;
-    margin: var(--md-gap) 0 var(--lg-gap) 0;
-  }
-  .differenceContainer > span {
-    justify-content: center;
-    transform: rotate(90deg);
-  }
-}
-
 .columnTxt {
   min-width: 100%;
+  flex: 1;
   text-wrap: balance;
+}
+
+.description {
+  font-family: "PT Root";
+  font-size: clamp(1rem, 0.9274193548rem + 0.3225806452vw, 1.25rem);
+  font-style: italic;
 }
 
 .textP {
@@ -287,7 +278,35 @@ h2 {
   font-family: "PT Root", sans-serif;
   font-weight: 700;
   line-height: clamp(2rem, 1.7096774194rem + 1.2903225806vw, 3rem);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.promo {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+@media (width <= 53.81125rem) {
+  .promo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.logo {
+  line-height: 20px;
+  padding: 0 24px;
+  background-color: oklch(59% 0.226975 258.9616deg / 0.1);
+  display: inline-block;
+  border-radius: 4px;
+  margin-bottom: 0;
+  align-content: center;
+}
+@media (width <= 53.81125rem) {
+  .logo {
+    padding: var(--sm-gap);
+    align-self: flex-start;
+  }
 }
 
 p {
@@ -304,7 +323,7 @@ p {
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 a {
@@ -328,19 +347,25 @@ a:hover {
 }
 
 footer {
-  display: flex;
-  column-gap: 2.5rem;
-  flex-wrap: wrap;
   padding-bottom: 1rem !important;
-}
-@media (width <= 64.06125rem) {
-  footer {
-    flex-direction: column;
-  }
 }
 footer p {
   font-family: "PT Root", sans-serif;
   font-size: clamp(1rem, 0.9637096774rem + 0.1612903226vw, 1.125rem);
+  margin-bottom: 0.3rem !important;
+  max-width: 100%;
+}
+
+.authors {
+  display: flex;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
+  margin: var(--sm-gap) 0 0 0;
+}
+@media (width <= 64.06125rem) {
+  .authors {
+    flex-direction: column;
+  }
 }
 
 button {
@@ -361,6 +386,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1;
 }
 .posters-item_img {
   margin-bottom: 1.2rem;
@@ -370,9 +396,9 @@ button:hover {
 }
 .posters-item-container {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   flex-direction: row;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 @media (width <= 53.81125rem) {
   .posters-item-container {
@@ -391,7 +417,7 @@ button:hover {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(4, 1fr);
   gap: 0.625rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 @media (width <= 45.06125rem) {
   .gallery {
@@ -501,8 +527,11 @@ button:hover {
 }
 
 .leading {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  color: rgba(255, 255, 255, 0.9529411765);
+  background-color: rgba(0, 0, 0, 0.862745098);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 24px;
 }
 .leading_description {
   display: flex;
@@ -513,7 +542,7 @@ button:hover {
   text-wrap: balance;
 }
 .leading > h1 {
-  margin-bottom: clamp(2.5rem, 2.1733870968rem + 1.4516129032vw, 3.625rem);
+  margin-bottom: clamp(2.25rem, 2.0322580645rem + 0.9677419355vw, 3rem);
 }
 
 /*# sourceMappingURL=styles.css.map */

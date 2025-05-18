@@ -1,8 +1,15 @@
 @use '../helpers' as *;
 
 .leading {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    color: #fffffff3;
+    background-color: #000000dc;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 24px;
+
+    // @include lg {
+    //     margin: 0 1.7rem 3rem 1.7rem;
+    // }
 
     &_description {
         display: flex;
@@ -15,7 +22,7 @@
     }
 
     & > h1 {
-        margin-bottom: fluid(58, 40);
+        margin-bottom: fluid(48, 36);
     }
    
 }

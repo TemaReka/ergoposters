@@ -1,8 +1,15 @@
 @use 'functions' as *;
 
+$lg: 1600.98;
 $middle: 1024.98;
 $middleSm: 860.98;
 $sm: 720.98;
+
+@mixin lg {
+    @media (width <= rem($lg)) {
+        @content;
+    }
+}
 
 @mixin middle {
     @media (width <= rem($middle)) {

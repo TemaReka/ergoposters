@@ -277,7 +277,7 @@ h2 {
   font-size: clamp(2rem, 1.7096774194rem + 1.2903225806vw, 3rem);
   font-family: "PT Root", sans-serif;
   font-weight: 700;
-  line-height: clamp(2rem, 1.7096774194rem + 1.2903225806vw, 3rem);
+  line-height: clamp(1.75rem, 1.3870967742rem + 1.6129032258vw, 3rem);
   margin-bottom: 1rem;
 }
 

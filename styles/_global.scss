@@ -17,30 +17,29 @@ h2 {
 
 .promo {
     margin-top: 3rem;
-    display: flex;
-    gap: 1.5rem;
+    // display: flex;
     margin-bottom: 2rem;
 
-    @include middleSm {
-        flex-direction: column;
-        gap: 1rem;
-    }
+    // @include middleSm {
+    //     flex-direction: column;
+    //     gap: 1rem;
+    // }
 }
 
-.logo {
-    line-height: 20px;
-    padding: 0 24px;
-    background-color: oklch(0.59 0.226975 258.9616 / 0.1);
-    display: inline-block;
-    border-radius: 4px;
-    margin-bottom: 0;
-    align-content: center;
+// .logo {
+//     line-height: 20px;
+//     padding: 0 24px;
+//     background-color: oklch(0.59 0.226975 258.9616 / 0.1);
+//     display: inline-block;
+//     border-radius: 4px;
+//     margin-bottom: 0;
+//     align-content: center;
 
-    @include middleSm {
-        padding: var(--sm-gap);
-        align-self: flex-start;
-    }
-}
+//     @include middleSm {
+//         padding: var(--sm-gap);
+//         align-self: flex-start;
+//     }
+// }
 
 // .promo > .logo > p {
 //     font-size: 30px;
@@ -48,7 +47,7 @@ h2 {
 // }
 
 p {
-    font-size: fluid(24, 20);
+    font-size: fluid(24, 18);
     font-family: 'PT Root', sans-serif;
     font-weight: 400;
     text-wrap: balance;

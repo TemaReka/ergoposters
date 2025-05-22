@@ -289,6 +289,26 @@ h2 {
   background-color: oklch(var(--link-color));
 }
 
+.disabled-img {
+  filter: opacity(0.5);
+}
+
+.posters-item_img {
+  position: relative;
+}
+
+.tag {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin-bottom: 0 !important;
+  padding: 4px 8px 6px 8px;
+  background-color: #000;
+  border-radius: 0;
+  z-index: 100;
+}
+
 .promo {
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -384,7 +404,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1;
+  width: calc(50% - 1rem);
 }
 .posters-item_img {
   margin-bottom: 1.2rem;
@@ -392,7 +412,9 @@ button:hover {
 .posters-item-container {
   display: flex;
   gap: 2rem;
+  row-gap: clamp(3.75rem, 3.5322580645rem + 0.9677419355vw, 4.5rem);
   flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 @media (width <= 53.81125rem) {

@@ -223,7 +223,8 @@ svg * {
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "PTRootUI", sans-serif;
   --container-width: 100rem;
-  --container-padding-x: clamp(1.875rem, 1.3306451613rem + 2.4193548387vw, 3.75rem);
+  --container-padding-x: clamp(2.5rem, 1.7741935484rem + 3.2258064516vw, 5rem);
+  --area-margin-x: clamp(1rem, 0.7459677419rem + 1.1290322581vw, 1.875rem);
   --body-padding-y: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
   --transition-duration: 0.5s;
   --link-color: 0.59 0.226975 258.9616;
@@ -281,9 +282,29 @@ h2 {
   margin-bottom: clamp(0.5rem, 0.3548387097rem + 0.6451612903vw, 1rem);
 }
 
+.disabled {
+  filter: saturate(0.1);
+}
+.disabled:hover {
+  background-color: oklch(var(--link-color));
+}
+
 .promo {
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+.area {
+  background-color: #000;
+  padding: clamp(3rem, 2.7096774194rem + 1.2903225806vw, 4rem) calc(var(--container-padding-x) - var(--area-margin-x));
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.faq-txt {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.3548387097rem + 0.6451612903vw, 2rem);
 }
 
 p {
@@ -367,9 +388,6 @@ button:hover {
 }
 .posters-item_img {
   margin-bottom: 1.2rem;
-}
-.posters-item_img img {
-  border: 1px solid #ccc;
 }
 .posters-item-container {
   display: flex;
@@ -504,11 +522,12 @@ button:hover {
 }
 
 .leading {
-  color: rgba(255, 255, 255, 0.9529411765);
-  background-color: rgba(0, 0, 0, 0.8980392157);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  border-radius: 24px;
+  color: #ffffff;
+  padding: 0 var(--area-margin-x);
+  margin-top: calc(var(--container-padding-x) - clamp(1rem, 0.8548387097rem + 0.6451612903vw, 1.5rem));
+}
+.leading-txt {
+  margin-bottom: clamp(2rem, 1.8185483871rem + 0.8064516129vw, 2.625rem);
 }
 .leading_description {
   display: flex;
@@ -518,8 +537,8 @@ button:hover {
   flex: 1;
   text-wrap: balance;
 }
-.leading > h1 {
-  margin-bottom: clamp(2.25rem, 2.0322580645rem + 0.9677419355vw, 3rem);
+.leading h1 {
+  margin-bottom: clamp(1rem, 0.8548387097rem + 0.6451612903vw, 1.5rem);
 }
 
 /*# sourceMappingURL=styles.css.map */

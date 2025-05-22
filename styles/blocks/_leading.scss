@@ -1,15 +1,21 @@
 @use '../helpers' as *;
 
 .leading {
-    color: #fffffff3;
-    background-color: #000000e5;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    border-radius: 24px;
+    color: #ffffff;
+    padding: 0 var(--area-margin-x);
+    margin-top: calc(var(--container-padding-x) - #{fluid(24, 16)});
+    // background-color: #000000;
+    // padding-top: 3rem;
+    // padding-bottom: 3rem;
+    // padding: 3rem 0;
 
     // @include lg {
     //     margin: 0 1.7rem 3rem 1.7rem;
     // }
+
+    &-txt {
+        margin-bottom: #{fluid(42, 32)};
+    }
 
     &_description {
         display: flex;
@@ -21,8 +27,8 @@
         }
     }
 
-    & > h1 {
-        margin-bottom: fluid(48, 36);
+    & h1 {
+        margin-bottom: fluid(24, 16);
     }
    
 }

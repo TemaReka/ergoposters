@@ -15,6 +15,14 @@ h2 {
     margin-bottom: fluid(16, 8);
 }
 
+.disabled {
+    filter: saturate(0.1);
+    
+    &:hover {
+        background-color: oklch(var(--link-color));
+    }
+}
+
 .promo {
     margin-top: 3rem;
     // display: flex;
@@ -25,26 +33,18 @@ h2 {
     //     gap: 1rem;
     // }
 }
+.area {
+    background-color: #000;
+    padding: #{fluid(64, 48)} calc( var(--container-padding-x) - var(--area-margin-x));
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
 
-// .logo {
-//     line-height: 20px;
-//     padding: 0 24px;
-//     background-color: oklch(0.59 0.226975 258.9616 / 0.1);
-//     display: inline-block;
-//     border-radius: 4px;
-//     margin-bottom: 0;
-//     align-content: center;
-
-//     @include middleSm {
-//         padding: var(--sm-gap);
-//         align-self: flex-start;
-//     }
-// }
-
-// .promo > .logo > p {
-//     font-size: 30px;
-//     line-height: 24px;
-// }
+.faq-txt {
+    display: flex;
+    flex-direction: column;
+    gap: #{fluid(32, 24)};
+}
 
 p {
     font-size: fluid(24, 18);
@@ -132,9 +132,6 @@ button {
     &_img {
         margin-bottom: 1.2rem;
 
-        & img {
-            border: 1px solid #ccc;
-        }
     }
     
     &-container {

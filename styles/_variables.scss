@@ -5,7 +5,9 @@
     --font-family-accent: 'PTRootUI', sans-serif;
 
     --container-width: #{rem(1600)};
-    --container-padding-x: #{fluid(60, 30)};
+    --container-padding-x: #{fluid(80, 40)};
+
+    --area-margin-x: #{fluid(30, 16)};
 
     --body-padding-y: #{fluid(40, 20)};
 

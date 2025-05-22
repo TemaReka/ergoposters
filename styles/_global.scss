@@ -132,7 +132,7 @@ button {
     color: #fff;
     background-color: oklch(var(--link-color));
     padding: rem(12) rem(24);
-    border-radius: rem(4);
+    // border-radius: rem(4);
     font-size: fluid(24, 20);
     font-family: 'PT Root', sans-serif;
     font-weight: 400;
@@ -149,6 +149,9 @@ button {
     align-items: flex-start;
     width: calc(50% - 1rem);
     
+    @include middleSm {
+        width: 100%;
+    }
 
     &_img {
         margin-bottom: 1.2rem;

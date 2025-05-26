@@ -23,8 +23,12 @@ h2 {
     }
 }
 
+.disabled-txt {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .disabled-img {
-    filter: opacity(0.5);
+    filter: opacity(0.3);
 }
 
 .posters-item_img {
@@ -55,7 +59,7 @@ h2 {
 }
 .area {
     background-color: #000;
-    padding: #{fluid(64, 48)} calc( var(--container-padding-x) - var(--area-margin-x));
+    padding: #{fluid(58, 48)} #{fluid(52, 36)}; //calc( var(--container-padding-x) - var(--area-margin-x)
     max-width: var(--container-width);
     margin: 0 auto;
 }
@@ -78,7 +82,7 @@ p {
     }
 }
 section {
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
 }
 
 a {
@@ -131,8 +135,8 @@ button {
     border: none;
     color: #fff;
     background-color: oklch(var(--link-color));
-    padding: rem(12) rem(24);
-    // border-radius: rem(4);
+    padding: rem(10) rem(24)  rem(12) rem(24);
+    border-radius: rem(4);
     font-size: fluid(24, 20);
     font-family: 'PT Root', sans-serif;
     font-weight: 400;

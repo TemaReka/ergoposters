@@ -16,11 +16,7 @@ h2 {
 }
 
 .disabled {
-    filter: saturate(0.1);
-    
-    &:hover {
-        background-color: oklch(var(--link-color));
-    }
+    opacity: 0.2;
 }
 
 .disabled-txt {

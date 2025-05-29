@@ -253,7 +253,7 @@ svg * {
 }
 
 .contact {
-  background-color: #fff6e5;
+  background-color: #f6f6ff;
   display: flex;
   max-width: 70%;
   padding: clamp(0.75rem, 0.6048387097rem + 0.6451612903vw, 1.25rem) clamp(1rem, 0.6370967742rem + 1.6129032258vw, 2.25rem) clamp(1rem, 0.7096774194rem + 1.2903225806vw, 2rem) clamp(1rem, 0.6370967742rem + 1.6129032258vw, 2.25rem);
@@ -304,10 +304,7 @@ h2 {
 }
 
 .disabled {
-  filter: saturate(0.1);
-}
-.disabled:hover {
-  background-color: oklch(var(--link-color));
+  opacity: 0.2;
 }
 
 .disabled-txt {

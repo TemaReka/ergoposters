@@ -23,6 +23,10 @@
     max-width: 70%;
     padding: #{fluid(20, 12)} #{fluid(36, 16)} #{fluid(32, 16)} #{fluid(36, 16)};
 
+    @include middle {
+        max-width: 100%;
+    }
+
     & p {
         max-width: 100%;
         text-wrap: auto;

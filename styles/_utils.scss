@@ -17,6 +17,19 @@
     margin-bottom: 1.5rem !important;
 }
 
+.contact {
+    background-color: #fff6e5;
+    display: flex;
+    max-width: 70%;
+    padding: #{fluid(20, 12)} #{fluid(36, 16)} #{fluid(32, 16)} #{fluid(36, 16)};
+
+    & p {
+        max-width: 100%;
+        text-wrap: auto;
+        margin-bottom: 0 !important;
+    }
+}
+
 .description {
     font-family: 'PT Root';
     font-size: fluid(20, 16);

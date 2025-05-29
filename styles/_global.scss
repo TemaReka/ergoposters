@@ -24,11 +24,7 @@ h2 {
 }
 
 .disabled-txt {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.disabled-img {
-    filter: opacity(0.3);
+    color: rgba(255, 255, 255, 0.25);
 }
 
 .posters-item_img {
@@ -74,7 +70,7 @@ p {
     font-size: fluid(24, 18);
     font-family: 'PT Root', sans-serif;
     font-weight: 400;
-    text-wrap: balance;
+    text-wrap: pretty;
     max-width: 70%;
 
     @include middle {

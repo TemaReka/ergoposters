@@ -223,7 +223,7 @@ svg * {
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "PTRootUI", sans-serif;
   --container-width: 100rem;
-  --container-padding-x: clamp(2.5rem, 1.7741935484rem + 3.2258064516vw, 5rem);
+  --container-padding-x: clamp(1.25rem, 0.1612903226rem + 4.8387096774vw, 5rem);
   --area-margin-x: clamp(1rem, 0.7459677419rem + 1.1290322581vw, 1.875rem);
   --body-padding-y: clamp(1.25rem, 0.8870967742rem + 1.6129032258vw, 2.5rem);
   --transition-duration: 0.5s;
@@ -250,6 +250,18 @@ svg * {
 
 .extraGap {
   margin-bottom: 1.5rem !important;
+}
+
+.contact {
+  background-color: #fff6e5;
+  display: flex;
+  max-width: 70%;
+  padding: clamp(0.75rem, 0.6048387097rem + 0.6451612903vw, 1.25rem) clamp(1rem, 0.6370967742rem + 1.6129032258vw, 2.25rem) clamp(1rem, 0.7096774194rem + 1.2903225806vw, 2rem) clamp(1rem, 0.6370967742rem + 1.6129032258vw, 2.25rem);
+}
+.contact p {
+  max-width: 100%;
+  text-wrap: auto;
+  margin-bottom: 0 !important;
 }
 
 .description {
@@ -294,11 +306,7 @@ h2 {
 }
 
 .disabled-txt {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.disabled-img {
-  filter: opacity(0.3);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .posters-item_img {
@@ -339,7 +347,7 @@ p {
   font-size: clamp(1.125rem, 1.0161290323rem + 0.4838709677vw, 1.5rem);
   font-family: "PT Root", sans-serif;
   font-weight: 400;
-  text-wrap: balance;
+  text-wrap: pretty;
   max-width: 70%;
 }
 @media (width <= 64.06125rem) {

@@ -11,5 +11,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.87.0"
+  },
+  "dependencies": {
+    "sharp": "^0.34.2"
   }
 }

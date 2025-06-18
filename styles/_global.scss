@@ -152,7 +152,6 @@ button {
 
     &_img {
         margin-bottom: 1.2rem;
-
     }
     
     &-container {
@@ -161,7 +160,7 @@ button {
         row-gap: #{fluid(72, 60)};
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 3rem;
+        margin-bottom: #{fluid(48, 24)};
 
         @include middleSm {
             display: flex;
@@ -174,14 +173,14 @@ button {
 
     & > div {
         flex: 1;
-        margin-bottom: fluid(28, 20);
+        // margin-bottom: fluid(28, 20);
     }
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
     gap: rem(10);
     margin-bottom: 2rem;
 
@@ -192,12 +191,12 @@ button {
 
     &-studio {
           &> div:nth-child(1) {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 4;
-        overflow: hidden;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 4;
+            overflow: hidden;
 
         & img {
-            transform: scale(1.3) translateX(0%) translateY(7%);
+            // transform: scale(1.3) translateX(0%) translateY(7%);
         }
 
         @include sm {
@@ -208,12 +207,12 @@ button {
     }
 
     &> div:nth-child(2) {
-        grid-column: 2 / span 1;
+        grid-column: 3 / span 1;
         grid-row: 1 / span 2;
         overflow: hidden;
 
         & img {
-            transform: scale(1.4) translateX(4%) translateY(7%);
+            // transform: scale(1.4) translateX(4%) translateY(7%);
         }
 
         @include sm {
@@ -223,12 +222,12 @@ button {
 
     }
     &> div:nth-child(3) {
-        grid-column: 2 / span 1;
+        grid-column: 3 / span 1;
         grid-row: 3 / span 2;
         overflow: hidden;
 
         & img {
-            transform: scale(1) translateY(0%) translateX(0%);
+            // transform: scale(1) translateY(0%) translateX(0%);
         }
 
         @include sm {
@@ -243,12 +242,12 @@ button {
 
     &-school {
         &> div:nth-child(1) {
-            grid-column: 1 / span 1;
-            grid-row: 1 / span 4;
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
             overflow: hidden;
 
             & img {
-                transform: scale(1.2) translateY(4%) translateX(0%);
+                // transform: scale(1.2) translateY(4%) translateX(0%);
             }
 
             @include sm {
@@ -259,12 +258,29 @@ button {
         }
 
         &> div:nth-child(2) {
-            grid-column: 2 / span 1;
-            grid-row: 1 / span 4;
+            grid-column: 1 / span 2;
+            grid-row: 3 / span 1;
             overflow: hidden;
 
             & img {
-                transform: scale(1.2) translateY(8%) translateX(-6%);
+                transform: scale(1);
+            }
+
+            
+        @include sm {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+        }
+    
+        } 
+
+        &> div:nth-child(3) {
+            grid-column: 3 / span 1;
+            grid-row: 3 / span 1;
+            overflow: hidden;
+
+            & img {
+                transform: scale(1.3);
             }
 
             
@@ -279,13 +295,9 @@ button {
     &-home {
 
         &> div:nth-child(1) {
-            grid-column: 1 / span 1;
-            grid-row: 1 / span 4;
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 1;
             overflow: hidden;
-
-            & img {
-                transform: scale(1.7) translateY(18%) translateX(-8%);
-            }
 
             @include sm {
                 grid-column: 1 / span 1;
@@ -295,13 +307,10 @@ button {
         } 
 
         &> div:nth-child(2) {
-            grid-column: 2 / span 1;
-            grid-row: 1 / span 3;
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
             overflow: hidden;
 
-            & img {
-                transform: scale(1.4) translateY(3%) translateX(-3%);
-            }
 
             @include sm {
                 grid-column: 1 / span 1;
@@ -312,18 +321,28 @@ button {
 
         &> div:nth-child(3) {
             grid-column: 2 / span 1;
-            grid-row: 4 / span 1;
+            grid-row: 2 / span 1;
             overflow: hidden;
 
-            & img {
-                transform: scale(1.5) translateY(16%) translateX(7%);
-            }
 
             @include sm {
                 grid-column: 1 / span 1;
-                grid-row: 3 / span 1;
+                grid-row: 2 / span 1;
             }
     
-        }  
+        } 
+
+                &> div:nth-child(4) {
+            grid-column: 3 / span 1;
+            grid-row: 2 / span 1;
+            overflow: hidden;
+
+
+            @include sm {
+                grid-column: 1 / span 1;
+                grid-row: 2 / span 1;
+            }
+    
+        } 
     }
 }

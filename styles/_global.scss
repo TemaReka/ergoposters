@@ -25,6 +25,12 @@ h2 {
 
 .posters-item_img {
     position: relative;
+
+    & img {
+        aspect-ratio: 0.666;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .tag {

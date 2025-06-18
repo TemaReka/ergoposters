@@ -314,6 +314,11 @@ h2 {
 .posters-item_img {
   position: relative;
 }
+.posters-item_img img {
+  aspect-ratio: 0.666;
+  width: 100%;
+  height: 100%;
+}
 
 .tag {
   position: absolute;

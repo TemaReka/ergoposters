@@ -554,7 +554,7 @@ button:hover {
   grid-column: 3/span 1;
   grid-row: 3/span 1;
   overflow: hidden;
-  aspect-ratio: 0.649;
+  aspect-ratio: 0.653;
 }
 .gallery-school > div:nth-child(3) img {
   transform: scale(1.3);

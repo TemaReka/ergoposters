@@ -188,7 +188,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: rem(10);
-    margin-bottom: 2rem;
+    margin-bottom: #{fluid(32, 16)};
 
     @include sm {
         grid-template-columns: auto;

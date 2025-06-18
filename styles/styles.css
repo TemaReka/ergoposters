@@ -462,7 +462,7 @@ button:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
   gap: 0.625rem;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1rem, 0.7096774194rem + 1.2903225806vw, 2rem);
 }
 @media (width <= 45.06125rem) {
   .gallery {
